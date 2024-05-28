@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recent News Articles</title>
+</head>
+<body>
+<h1>Recent News Articles</h1>
+<ul>
+{% for article in articles %}
+<li>
+<a href="/full-article/{{ loop.index - 1 }}">{{ article['title'] }}</a>
+<p><b>Author:</b> {{ article['author'] }}</p>
+<p><b>Publication Date:</b> {{ article['publishedAt'] }}</p>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
